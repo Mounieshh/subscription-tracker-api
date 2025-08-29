@@ -1,5 +1,7 @@
 import e from "express";
 
+import { PORT } from "./config/env";
+
 const app = e();
 
 
@@ -9,6 +11,6 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(5000, () => {
-    console.log("Subscription Tracker API running on http://localhost:5000")
+app.listen(PORT, () => {
+    console.log(`Subscription Tracker API running on http://localhost:${PORT}`)
 })
