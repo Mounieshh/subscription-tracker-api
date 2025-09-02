@@ -16,7 +16,7 @@ const errorMiddleware = (err, req, res, next) => {
 
         //Mongoose duplicate key
 
-        if(err.Code == 11020){
+        if(err.code == 11020){
             const message = "Duplicate field value entered"
             error = new Error(message)
             error.statusCode = 400
